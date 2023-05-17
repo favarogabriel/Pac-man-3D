@@ -25,18 +25,27 @@ public class PlayerController : MonoBehaviour
 
     private void MovePlayer()
     {
-        int rotateDirection = 90;
 
         transform.Translate(Vector3.left * playerSpeed * Time.deltaTime);
 
-        if(Input.GetKeyDown(KeyCode.RightArrow))
+        if(Input.GetKeyDown(KeyCode.UpArrow))
         {
-            transform.Rotate(new Vector3(0, rotateDirection, 0));
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         
-        if(Input.GetKeyDown(KeyCode.LeftArrow))
+        if(Input.GetKeyDown(KeyCode.RightArrow))
         {
-            transform.Rotate(new Vector3(0, -rotateDirection, 0));
+            transform.rotation = Quaternion.Euler(0, 90, 0);
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            transform.rotation = Quaternion.Euler(0, -90, 0);
+        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            transform.rotation = Quaternion.Euler(0, -180, 0);
         }
     }
 
