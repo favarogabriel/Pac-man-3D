@@ -1570,7 +1570,6 @@ GameObject:
   m_Component:
   - component: {fileID: 45593832}
   - component: {fileID: 45593833}
-  - component: {fileID: 45593834}
   m_Layer: 0
   m_Name: Right Portal
   m_TagString: Right Portal
@@ -1606,18 +1605,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.186676, y: 4.8052497, z: 8.443915}
   m_Center: {x: -1.1235371, y: 1.9026244, z: 0.5877547}
---- !u!114 &45593834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 45593831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f74273ce2a93b848bc38ad34136048a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &46747962
 GameObject:
   m_ObjectHideFlags: 0
@@ -32485,8 +32472,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 855387659}
-  - component: {fileID: 855387660}
-  - component: {fileID: 855387661}
   m_Layer: 0
   m_Name: Vertical Score(Clone) (8)
   m_TagString: Untagged
@@ -32509,30 +32494,6 @@ Transform:
   m_Father: {fileID: 232309699}
   m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &855387660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 855387658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33913af7054aa3f4ba0da8a9a84fc6c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &855387661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 855387658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0eda235f0f8bc3746b3f02ad0434f043, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &862829373
 GameObject:
   m_ObjectHideFlags: 0
@@ -32712,7 +32673,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 892385371}
-  - component: {fileID: 892385372}
   - component: {fileID: 892385373}
   m_Layer: 0
   m_Name: Vertical Score(Clone) (5)
@@ -32736,18 +32696,6 @@ Transform:
   m_Father: {fileID: 232309699}
   m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &892385372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 892385370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33913af7054aa3f4ba0da8a9a84fc6c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &892385373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60953,8 +60901,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1735228071}
-  - component: {fileID: 1735228072}
-  - component: {fileID: 1735228073}
   m_Layer: 0
   m_Name: Vertical Score(Clone) (7)
   m_TagString: Untagged
@@ -60977,30 +60923,6 @@ Transform:
   m_Father: {fileID: 232309699}
   m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1735228072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1735228070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33913af7054aa3f4ba0da8a9a84fc6c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1735228073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1735228070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0eda235f0f8bc3746b3f02ad0434f043, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1735761628
 GameObject:
   m_ObjectHideFlags: 0
@@ -74918,8 +74840,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2126357149}
-  - component: {fileID: 2126357150}
-  - component: {fileID: 2126357151}
   m_Layer: 0
   m_Name: Vertical Score(Clone) (6)
   m_TagString: Untagged
@@ -74942,30 +74862,6 @@ Transform:
   m_Father: {fileID: 232309699}
   m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2126357150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126357148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33913af7054aa3f4ba0da8a9a84fc6c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2126357151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126357148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0eda235f0f8bc3746b3f02ad0434f043, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2130036452
 GameObject:
   m_ObjectHideFlags: 0
