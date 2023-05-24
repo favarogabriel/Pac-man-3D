@@ -15,6 +15,10 @@ public class PlayerController : MonoBehaviour
     public bool movingUp;
     public bool movingDown;
 
+    public int points;
+
+    [SerializeField] private GameObject playerIdle;
+    [SerializeField] private GameObject playerEat;
 
 
     // Start is called before the first frame update
@@ -25,7 +29,9 @@ public class PlayerController : MonoBehaviour
         playerRb = GetComponent<Rigidbody>();
 
         playerRb.velocity = new Vector3(playerSpeed, 0, 0);
+        points = 0;
 
+        InvokeRepeating("PlayerAnimation", 0.0f, 0.2f);
     }
 
     // Update is called once per frame
@@ -65,7 +71,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Move Point"))
         {
@@ -89,6 +95,31 @@ public class PlayerController : MonoBehaviour
                 gameObject.transform.rotation = Quaternion.Euler(0, 90, 0);
                 playerRb.velocity = new Vector3(0, 0, -playerSpeed);
             }
+      
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Move Point"))
+        {
+            movingDown = false;
+            movingUp = false;
+            movingRight = false;
+            movingLeft = false;
+        }
+    }
+
+    private void PlayerAnimation()
+    {
+        if (playerIdle.active == true)
+        {
+            playerEat.SetActive(true);
+            playerIdle.SetActive(false);
+        } else if (playerEat.active == true)
+        {
+            playerEat.SetActive(false);
+            playerIdle.SetActive(true);
         }
     }
 }
