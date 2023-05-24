@@ -7,6 +7,8 @@ TagManager:
   - Point
   - Sensor
   - Move Point
+  - Right Portal
+  - Left Portal
   layers:
   - Default
   - TransparentFX

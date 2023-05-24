@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public bool movingDown;
 
     public int points;
+    public bool moveDelay;
 
     [SerializeField] private GameObject playerIdle;
     [SerializeField] private GameObject playerEat;
@@ -49,18 +50,22 @@ public class PlayerController : MonoBehaviour
             movingRight = false;
             movingLeft = false;
             movingDown = false;
+            
         } else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             movingUp = false;
             movingRight = false;
             movingLeft = false;
             movingDown = true;
-        } else if (Input.GetKeyDown(KeyCode.RightArrow))
+          
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             movingUp = false;
             movingRight = true;
             movingLeft = false;
             movingDown = false;
+            
         }
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
@@ -68,34 +73,51 @@ public class PlayerController : MonoBehaviour
             movingRight = false;
             movingLeft = true;
             movingDown = false;
+           
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Move Point"))
+        if (other.gameObject.CompareTag("Right Portal"))
+        {
+            transform.position = new Vector3(-28, 1.52f, 1.61f);
+        } else if (other.gameObject.CompareTag("Left Portal"))
+        {
+            transform.position = new Vector3(28, 1.52f, 1.61f);
+        }
+
+        if (other.gameObject.CompareTag("Move Point") && moveDelay == false)
         {
             if (movingRight == true)
             {
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
                 playerRb.velocity = new Vector3(playerSpeed, 0, 0);
+                moveDelay = true;
+                StartCoroutine("MovingDelay");
             }
             if (movingLeft == true)
             {
                 gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
                 playerRb.velocity = new Vector3(-playerSpeed, 0, 0);
+                moveDelay = true;
+                StartCoroutine("MovingDelay");
             }
             if (movingUp == true)
             {
                 gameObject.transform.rotation = Quaternion.Euler(0, -90, 0);
                 playerRb.velocity = new Vector3(0, 0, playerSpeed);
+                moveDelay = true;
+                StartCoroutine("MovingDelay");
             }
             if (movingDown == true)
             {
                 gameObject.transform.rotation = Quaternion.Euler(0, 90, 0);
                 playerRb.velocity = new Vector3(0, 0, -playerSpeed);
+                moveDelay = true;
+                StartCoroutine("MovingDelay");
             }
-      
+
         }
     }
 
@@ -121,5 +143,11 @@ public class PlayerController : MonoBehaviour
             playerEat.SetActive(false);
             playerIdle.SetActive(true);
         }
+    }
+
+    private IEnumerator MovingDelay()
+    {
+        yield return new WaitForSeconds(0.3f);
+        moveDelay = false;
     }
 }
