@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class RotatingPoint : MonoBehaviour
 {
-    private PlayerController playerControllerScript;
+    public bool noLeft;
+    public bool noRight;
+    public bool noUp;
+    public bool noDown;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
+       
     }
 
     // Update is called once per frame

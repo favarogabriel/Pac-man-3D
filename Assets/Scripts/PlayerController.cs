@@ -79,6 +79,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
+        RotatingPoint rotatingPointScript = other.gameObject.GetComponent<RotatingPoint>();
+
         if (other.gameObject.CompareTag("Right Portal"))
         {
             transform.position = new Vector3(-28, 1.52f, 1.61f);
@@ -89,28 +92,30 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.CompareTag("Move Point") && moveDelay == false)
         {
-            if (movingRight == true)
+
+
+            if (movingRight == true && rotatingPointScript.noRight == false)
             {
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
                 playerRb.velocity = new Vector3(playerSpeed, 0, 0);
                 moveDelay = true;
                 StartCoroutine("MovingDelay");
             }
-            if (movingLeft == true)
+            if (movingLeft == true && rotatingPointScript.noLeft == false)
             {
                 gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
                 playerRb.velocity = new Vector3(-playerSpeed, 0, 0);
                 moveDelay = true;
                 StartCoroutine("MovingDelay");
             }
-            if (movingUp == true)
+            if (movingUp == true && rotatingPointScript.noUp == false)
             {
                 gameObject.transform.rotation = Quaternion.Euler(0, -90, 0);
                 playerRb.velocity = new Vector3(0, 0, playerSpeed);
                 moveDelay = true;
                 StartCoroutine("MovingDelay");
             }
-            if (movingDown == true)
+            if (movingDown == true && rotatingPointScript.noDown == false)
             {
                 gameObject.transform.rotation = Quaternion.Euler(0, 90, 0);
                 playerRb.velocity = new Vector3(0, 0, -playerSpeed);
