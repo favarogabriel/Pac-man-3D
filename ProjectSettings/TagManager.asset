@@ -10,6 +10,15 @@ TagManager:
   - Right Portal
   - Left Portal
   - Wall
+  - Blue Ghost
+  - Pink Ghost
+  - Red Ghost
+  - Move Point Ghost
+  - Move Point Home
+  - Top Detector
+  - Bottom Detector
+  - Right Detector
+  - Left Detector
   layers:
   - Default
   - TransparentFX
