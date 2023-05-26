@@ -1,2 +1,2 @@
 # Pacman-3D
- I recreated Pac-Man, but in 3D version.
+ I recreating Pac-Man, but in 3D version.
