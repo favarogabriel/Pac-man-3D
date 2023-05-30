@@ -19,6 +19,7 @@ TagManager:
   - Bottom Detector
   - Right Detector
   - Left Detector
+  - Ghost
   layers:
   - Default
   - TransparentFX
